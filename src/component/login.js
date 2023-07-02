@@ -44,7 +44,7 @@ const Login = () => {
                           }
                       })
                   }else if(responsesJson.role === 0){
-                      navigate("/modirItFaculty",{
+                      navigate("/modirItStudent",{ //modirItFaculty // modirItOstad //modirItModir //modirItStudent
                           state: {
                               name: responsesJson.name,
                               role: responsesJson.role,
