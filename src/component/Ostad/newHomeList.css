@@ -1,0 +1,8 @@
+.sidebar {
+    height: 100vh; /* Set the height of the sidebar to 100% of the viewport height */
+    overflow-y: auto; /* Enable scrolling if the content exceeds the height of the sidebar */
+}
+
+Button{
+
+}
