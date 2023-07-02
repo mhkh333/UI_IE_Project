@@ -79,9 +79,9 @@ function MakeFaculty(props) {
         };
 
         const handleFieldChange = event => {
-
             setFieldss(event.target.value);
         }
+
         return (
             <div className="container">
                 <div className="row">

@@ -44,7 +44,7 @@ const Login = () => {
                           }
                       })
                   }else if(responsesJson.role === 0){
-                      navigate("/ListOfMoavenAmozeshi",{
+                      navigate("/modirItFaculty",{ //modirItFaculty // modirItOstad //modirItModir //modirItStudent
                           state: {
                               name: responsesJson.name,
                               role: responsesJson.role,
