@@ -7,9 +7,49 @@ import alert from "bootstrap/js/src/alert";
 function MakeFaculty(props) {
     let ss;
     const location = useLocation();
+    const navigate = useNavigate();
 
     const [name, setName] = useState("");
     const [fieldss, setFieldss] = useState([]);
+
+    const handleClick1 = async () => {
+        navigate("/ListOfStudents", {
+            state: {
+                name: location.state.name,
+                role: location.state.role,
+                jwt: location.state.jwt
+            }
+        })
+    }
+
+    const handleClick2 = async () => {
+        navigate("/ListOfOstads", {
+            state: {
+                name: location.state.name,
+                role: location.state.role,
+                jwt: location.state.jwt
+            }
+        })
+    }
+    const handleClick3 = async () => {
+        navigate("/ListOfMoavenAmozeshi", {
+            state: {
+                name: location.state.name,
+                role: location.state.role,
+                jwt: location.state.jwt
+            }
+        })
+    }
+
+    const handleClick4 = async () => {
+        navigate("/modirItFaculty", {
+            state: {
+                name: location.state.name,
+                role: location.state.role,
+                jwt: location.state.jwt
+            }
+        })
+    }
 
     const handleFaculty = async (event) => {
         // setFieldss(ss);
@@ -86,7 +126,7 @@ function MakeFaculty(props) {
             <div className="container">
                 <div className="row">
                     <div className="col-xl-9">
-                        <h1>Login</h1>
+                        <h1>ایجاد دانشکده</h1>
                         <form onSubmit={handleFaculty}>
                             <div className="mb-3">
                                 <label htmlFor="email" className="form-label">نام</label>
@@ -102,15 +142,28 @@ function MakeFaculty(props) {
                     </div>
                     <div className="col-xl-3">
                         <aside className="bg-light p-3 sidebar">
-                            <span>مشاهده لیست دروس</span>
+                             <span onClick={() => handleClick1()}>
+                        مشاهده لیست دانشجویان
+                    </span>
                             <br/>
                             <br/>
+                            <span onClick={() => handleClick2()}>
+                        مشاهده لیست اساتید
+                    </span>
                             <br/>
-                            <span>مشاهده لیست ترمها</span>
+                            <br/>
+                            <span onClick={() => handleClick3()}>
+                        مشاهده لیست معاونین
+                    </span>
                             <br/>
                             <br/>
+
+                            <span onClick={() => handleClick4()}>
+                        ایجاد دانشکده
+                    </span>
                             <br/>
-                            <span> مشاهده  لیست دروس </span></aside>
+
+                        </aside>
 
                     </div>
                 </div>

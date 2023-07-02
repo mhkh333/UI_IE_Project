@@ -6,6 +6,9 @@ import alert from "bootstrap/js/src/alert";
 function MakeModir(props) {
 
     const location = useLocation();
+    const navigate = useNavigate();
+
+
 
     const [name, setName] = useState("");
     const [family, setFamily] = useState("");
@@ -49,6 +52,46 @@ function MakeModir(props) {
         } catch (error) {
             console.log('Error fetching data:', error);
         }
+    }
+
+
+    const handleClick1 = async () => {
+        navigate("/ListOfStudents", {
+            state: {
+                name: location.state.name,
+                role: location.state.role,
+                jwt: location.state.jwt
+            }
+        })
+    }
+
+    const handleClick2 = async () => {
+        navigate("/ListOfOstads", {
+            state: {
+                name: location.state.name,
+                role: location.state.role,
+                jwt: location.state.jwt
+            }
+        })
+    }
+    const handleClick3 = async () => {
+        navigate("/ListOfMoavenAmozeshi", {
+            state: {
+                name: location.state.name,
+                role: location.state.role,
+                jwt: location.state.jwt
+            }
+        })
+    }
+
+    const handleClick4 = async () => {
+        navigate("/modirItFaculty", {
+            state: {
+                name: location.state.name,
+                role: location.state.role,
+                jwt: location.state.jwt
+            }
+        })
     }
 
     const handleNameChange = event => {
@@ -135,15 +178,27 @@ function MakeModir(props) {
                 </form>
                 <div className="col-xl-3">
                     <aside className="bg-light p-3 sidebar">
-                        <span>مشاهده لیست دروس</span>
+                        <span onClick={() => handleClick1()}>
+                            مشاهده لیست دانشجویان
+                        </span>
                         <br/>
                         <br/>
+                        <span onClick={() => handleClick2()}>
+                            مشاهده لیست اساتید
+                        </span>
                         <br/>
-                        <span>مشاهده لیست ترمها</span>
+                        <br/>
+                        <span onClick={() => handleClick3()}>
+                            مشاهده لیست معاونین
+                        </span>
                         <br/>
                         <br/>
+
+                        <span onClick={() => handleClick4()}>
+                        ایجاد دانشکده
+                    </span>
                         <br/>
-                        <span> مشاهده  لیست دروس </span></aside>
+                    </aside>
 
                 </div>
             </div>

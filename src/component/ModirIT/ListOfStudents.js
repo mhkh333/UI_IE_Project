@@ -35,7 +35,7 @@ function ListOfStudents() {
     }, [data]); // Trigger the effect whenever 'data' changes
 
     const handleAddStudent = async () => {
-        navigate("/modirItFaculty", {
+        navigate("/modirItStudent", {
             state: {
                 name: location.state.name,
                 role: location.state.role,
@@ -92,7 +92,7 @@ function ListOfStudents() {
 
 
     const handleClick1 = async () => {
-        navigate("/modirItFaculty", {
+        navigate("/ListOfStudents", {
             state: {
                 name: location.state.name,
                 role: location.state.role,
@@ -102,7 +102,7 @@ function ListOfStudents() {
     }
 
     const handleClick2 = async () => {
-        navigate("/modirItFaculty", {
+        navigate("/ListOfOstads", {
             state: {
                 name: location.state.name,
                 role: location.state.role,
@@ -111,7 +111,7 @@ function ListOfStudents() {
         })
     }
     const handleClick3 = async () => {
-        navigate("/modirItFaculty", {
+        navigate("/ListOfMoavenAmozeshi", {
             state: {
                 name: location.state.name,
                 role: location.state.role,
@@ -119,6 +119,7 @@ function ListOfStudents() {
             }
         })
     }
+
     const handleClick4 = async () => {
         navigate("/modirItFaculty", {
             state: {
@@ -128,25 +129,6 @@ function ListOfStudents() {
             }
         })
     }
-    const handleClick5 = async () => {
-        navigate("/modirItFaculty", {
-            state: {
-                name: location.state.name,
-                role: location.state.role,
-                jwt: location.state.jwt
-            }
-        })
-    }
-    const handleClick6 = async () => {
-        navigate("/modirItFaculty", {
-            state: {
-                name: location.state.name,
-                role: location.state.role,
-                jwt: location.state.jwt
-            }
-        })
-    }
-
 
 
     return (
@@ -188,31 +170,21 @@ function ListOfStudents() {
                     </span>
                     <br />
                     <br />
-                    <span onClick={() => handleClic2()}>
-                        مشاهده لیست دانشجویان
+                    <span onClick={() => handleClick2()}>
+                        مشاهده لیست اساتید
                     </span>
                     <br />
                     <br />
                     <span onClick={() => handleClick3()}>
-                        مشاهده لیست دانشجویان
+                        مشاهده لیست معاونین
                     </span>
-                    <br />
-                    <br />
+                    <br/>
+                    <br/>
+
                     <span onClick={() => handleClick4()}>
-                        مشاهده لیست دانشجویان
+                        ایجاد دانشکده
                     </span>
-                    <br />
-                    <br />
-                    <span onClick={() => handleClick5()}>
-                        مشاهده لیست دانشجویان
-                    </span>
-                    <br />
-                    <br />
-                    <span onClick={() => handleClick6()}>
-                        مشاهده لیست دانشجویان
-                    </span>
-                    <br />
-                    <br />
+
                 </aside>
 
             </div>

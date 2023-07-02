@@ -35,7 +35,7 @@ function ListOfOstads() {
     }, [data]); // Trigger the effect whenever 'data' changes
 
     const handleAddStudent = async () => {
-        navigate("/modirItFaculty", {
+        navigate("/modirItOstad", {
             state: {
                 name: location.state.name,
                 role: location.state.role,
@@ -44,6 +44,45 @@ function ListOfOstads() {
         })
     }
 
+    const handleClick1 = async () => {
+        navigate("/ListOfStudents", {
+            state: {
+                name: location.state.name,
+                role: location.state.role,
+                jwt: location.state.jwt
+            }
+        })
+    }
+
+    const handleClick2 = async () => {
+        navigate("/ListOfOstads", {
+            state: {
+                name: location.state.name,
+                role: location.state.role,
+                jwt: location.state.jwt
+            }
+        })
+    }
+    const handleClick3 = async () => {
+        navigate("/ListOfMoavenAmozeshi", {
+            state: {
+                name: location.state.name,
+                role: location.state.role,
+                jwt: location.state.jwt
+            }
+        })
+    }
+
+
+    const handleClick4 = async () => {
+        navigate("/modirItFaculty", {
+            state: {
+                name: location.state.name,
+                role: location.state.role,
+                jwt: location.state.jwt
+            }
+        })
+    }
 
     const handleClick = async (event, students) => {
         try {
@@ -129,31 +168,19 @@ function ListOfOstads() {
                     </span>
                     <br />
                     <br />
-                    <span onClick={() => handleClic2()}>
-                        مشاهده لیست دانشجویان
+                    <span onClick={() => handleClick2()}>
+                        مشاهده لیست اساتید
                     </span>
                     <br />
                     <br />
                     <span onClick={() => handleClick3()}>
-                        مشاهده لیست دانشجویان
+                        مشاهده لیست معاونین
                     </span>
-                    <br />
-                    <br />
-                    <span onClick={() => handleClic4()}>
-                        مشاهده لیست دانشجویان
+                    <br/>
+                    <br/>
+                    <span onClick={() => handleClick4()}>
+                        ایجاد دانشکده
                     </span>
-                    <br />
-                    <br />
-                    <span onClick={() => handleClick5()}>
-                        مشاهده لیست دانشجویان
-                    </span>
-                    <br />
-                    <br />
-                    <span onClick={() => handleClick6()}>
-                        مشاهده لیست دانشجویان
-                    </span>
-                    <br />
-                    <br />
                 </aside>
 
             </div>

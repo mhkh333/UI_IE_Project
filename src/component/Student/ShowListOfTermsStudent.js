@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './newHomeList.css'; // Import your custom CSS file
+// import './newHomeList.css'; // Import your custom CSS file
 import {useLocation, useNavigate} from 'react-router-dom'
 
-function HomeListTerms(props) {
+function ShowListOfTermsStudent(props) {
     const location = useLocation()
 
     const navigate = useNavigate();
@@ -49,7 +49,7 @@ function HomeListTerms(props) {
         console.log(term);
 
 
-        navigate("/ostadShowCoursesInTerm", {
+        navigate("/studentTermCourse", {
             state: ({
                 termId: term._id,
                 termName: term.name,
@@ -64,7 +64,7 @@ function HomeListTerms(props) {
     return (
         <div className="container-fluid h-100">
             <div className="row">
-                <header className="col-12 bg-primary text-white p-3"> لیست ترم ها</header>
+                <header className="col-12 bg-primary text-white p-3">لیست ترم ها برای  {location.state.name}</header>
             </div>
             <div className="row h-100">
                 <div className="col-xl-9">
@@ -88,4 +88,4 @@ function HomeListTerms(props) {
     );
 }
 
-export default HomeListTerms;
+export default ShowListOfTermsStudent;

@@ -15,6 +15,10 @@ import ListOfMoavenAmozeshi from './component/ModirIT/ListOfMoavenAmozeshi';
 import MakeOstad from "./component/ModirIT/MakeOstad";
 import MakeModir from "./component/ModirIT/MakeModir";
 import MakeStudent from "./component/ModirIT/MakeStudent";
+import ShowStudentInFaculty from "./component/ModirAmuzesh/ShowStudentInFaculty";
+import ShowOstadInFaculty from "./component/ModirAmuzesh/ShowOstadInFaculty";
+import ShowListOfTermsStudent from "./component/Student/ShowListOfTermsStudent";
+import ChooseBetween from "./component/Student/ChooseBetween";
 
 function App() {
   return (
@@ -30,10 +34,15 @@ function App() {
           <Route path="/modirItFaculty"  element={<MakeFaculty/>}/>
           <Route path="/ListOfStudents"  element={<ListOfStudents/>}/>
           <Route path="/ListOfOstads"  element={<ListOfOstads/>}/>
+          <Route path="/ListOfStudentsModir"  element={<ShowStudentInFaculty/>}/>
+          <Route path="/ListOfOstadsModir"  element={<ShowOstadInFaculty/>}/>
           <Route path="/ListOfMoavenAmozeshi"  element={<ListOfMoavenAmozeshi/>}/>  
           <Route path="/modirItOstad"  element={<MakeOstad/>}/>
           <Route path="/modirItModir"  element={<MakeModir/>}/>
           <Route path="/modirItStudent"  element={<MakeStudent/>}/>
+          <Route path="/ListOfStudentTerms"  element={<ShowListOfTermsStudent/>}/>
+          <Route path="/studentTermCourse"  element={<ChooseBetween/>}/>
+
         </Routes>
       </BrowserRouter>
     </div>
