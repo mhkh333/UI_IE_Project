@@ -7,6 +7,9 @@ import HomeListTerms from "./component/Ostad/Home_ListTerms";
 import ShowCoursesInTerm from "./component/Ostad/ShowCoursesInTerm";
 import ShowStudentsInCourse from "./component/Ostad/ShowStudentsInCourse";
 import MakeFaculty from "./component/ModirIT/MakeFaculty";
+import ListOfStudents from './component/ModirIT/ListOfStudents';
+import ListOfOstads from './component/ModirIT/ListOfOstads';
+import ListOfMoavenAmozeshi from './component/ModirIT/ListOfMoavenAmozeshi';
 function App() {
   return (
     <div className='APP'>
@@ -19,6 +22,10 @@ function App() {
           <Route path="/login" element={<Login/>}/>
           <Route path="/home"  element={<Home/>}/>
           <Route path="/modirItFaculty"  element={<MakeFaculty/>}/>
+          <Route path="/ListOfStudents"  element={<ListOfStudents/>}/>
+          <Route path="/ListOfOstads"  element={<ListOfOstads/>}/>
+          <Route path="/ListOfMoavenAmozeshi"  element={<ListOfMoavenAmozeshi/>}/>
+          
         </Routes>
       </BrowserRouter>
     </div>
